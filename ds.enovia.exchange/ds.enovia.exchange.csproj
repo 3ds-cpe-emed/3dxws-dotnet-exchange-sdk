@@ -4,14 +4,29 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>3DEXPERIENCE Enterprise IP Exchange C# SDK</Title>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Copyright>Dassault Systèmes CPE Emed</Copyright>
+    <PackageTags>3DEXPERIENCE</PackageTags>
+    <Description>3DEXPERIENCE Enterprise IP Exchange C# SDK</Description>
+    <SignAssembly>True</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <Company>Dassault Systèmes CPE Emed</Company>
+    <RepositoryUrl>https://github.com/3ds-cpe-emed/3dxws-dotnet-exchange-sdk</RepositoryUrl>
+    <PackageReleaseNotes>Baseline Enterprise IP Exchange Export funcionality</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ds.enovia" Version="2.0.5" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ws3dx.shared\ws3dx.shared.csproj" />
+    <PackageReference Include="ds.enovia" Version="2.0.5" />
   </ItemGroup>
 
 </Project>
