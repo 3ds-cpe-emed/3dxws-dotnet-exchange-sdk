@@ -42,8 +42,6 @@ namespace ds.enovia.exchange.tests
 
       private UserInfo m_userInfo = null!;
 
-      private const string PART_NUMBER_TEST = "AAA27:0000002";
-
       public async Task<IPassportAuthentication> Authenticate()
       {
          UserPassport passport = new UserPassport(m_passportUrl);
