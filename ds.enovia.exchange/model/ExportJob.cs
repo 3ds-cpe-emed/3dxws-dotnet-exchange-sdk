@@ -112,12 +112,10 @@ namespace ds.enovia.exchange.model
       [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
       public List<object> Parameters { get; set; } = null!;
 
-      [JsonPropertyName("hasCompleted")]
-      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+      [JsonPropertyName("hasCompleted")]      
       public bool HasCompleted { get { return !string.IsNullOrEmpty(EndDate); } }
 
       [JsonPropertyName("hasSucceeded")]
-      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
       public bool HasSucceeded { get { return Status?.ToLowerInvariant().Equals("succeeded") == true; } }
    }
 }
