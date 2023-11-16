@@ -27,6 +27,7 @@ namespace ds.enovia.exchange.model
       {
          Version = LAST_VERSION;
          Format = DEFAULT_FORMAT;
+         SelectorMode = null;
       }
 
       [JsonPropertyName("version")]
@@ -48,5 +49,9 @@ namespace ds.enovia.exchange.model
       [JsonPropertyName("parameters")]
       [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
       public List<object> Parameters { get; set; } = null!;
+
+      [JsonPropertyName("selectorMode")]
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+      public bool? SelectorMode { get; set; }
    }
 }
